@@ -1,16 +1,21 @@
 <template>
-  <div class="hello">
-    1111111111
+  <div class="Layout">
+    Layout
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Layout',
+  computed: {
+    
+  },
   data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+    return {};
+  },
+  created(){
+    // console.log(this)
   }
 }
 </script>

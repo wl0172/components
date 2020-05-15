@@ -1,15 +1,34 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+
+import Layout from '@/layout'
+
+
+import demo from '@/page/demo'
+
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+    // { path: '/Layout', name: 'Layout', component: Layout},
+    // { path: '/demo', name: 'demo', component: demo},
+
+    { path: '/', name:'demo', component: Layout,
+      children: [{
+        path: '/',
+        name: '首页',
+        component: () => import('@/page/demo'),
+        meta: { title: '首页' }
+      }]
+    },
+    { path: '/popup', name:'popup', component: Layout,
+      children: [{
+        path: '/popup',
+        name: '首页',
+        component: () => import('@/page/popup'),
+        meta: { title: 'popup' }
+      }]
+    },
   ]
 })

@@ -11,27 +11,6 @@
       </el-select>
     demo1
 
-        <el-select
-          filterable
-          v-model="listQuery.state"
-          placeholder="审核状态"
-          clearable
-          style="width: 180px"
-          class="filter-item"
-        >
-        <el-option
-          v-for="(item,index) in statusList"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        />
-      </el-select>
-
-
-
-
-
-
 
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="popup">
-    popup
+    popup 
   </div>
 </template>
 

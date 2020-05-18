@@ -14,7 +14,7 @@ export default new Router({
     // { path: '/Layout', name: 'Layout', component: Layout},
     // { path: '/demo', name: 'demo', component: demo},
 
-    { path: '/', name:'demo', component: Layout,
+    { path: '/', name:'demo测试', component: Layout,
       children: [{
         path: '/',
         name: '首页',
@@ -22,7 +22,7 @@ export default new Router({
         meta: { title: '首页' }
       }]
     },
-    { path: '/popup', name:'popup', component: Layout,
+    { path: '/popup', name:'popup弹窗', component: Layout,
       children: [{
         path: '/popup',
         name: '首页',

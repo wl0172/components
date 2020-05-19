@@ -1,6 +1,6 @@
 .el-container {
   height: 100%;
-  border: 1px solid #eee
+  // border: 1px solid #eee
 }
 
 .Layout {
@@ -15,4 +15,10 @@
     height: 100%;
   }
 }
- 
+// 头像信息
+.userInfo{
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  color: #fff;
+}

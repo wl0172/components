@@ -1,108 +1,53 @@
 <template>
   <div class="Layout">
+
     <el-container class="el-container">
 
       <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+
         <div class="Layout-left">
-          <!-- 
+          <el-menu class="el-menu-vertical-demo" 
             @open="handleOpen"
             @close="handleClose"
-          -->
-          <el-menu class="el-menu-vertical-demo" :default-active=" activeMenu"background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+            background-color="#545c64" 
+            text-color="#fff" 
+            active-text-color="#ffd04b">
+            <div class="userInfo">
+              <div>头像信息</div>
+            </div>
 
             <el-submenu index="1">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span>导航一</span>
+                <span>组件列表</span>
               </template>
-
               <el-menu-item-group v-for="(item,i) in routes" :key="i">
-                <template slot="title">分组一</template>
-                <el-menu-item index="1-1">选项1</el-menu-item>
-                <el-menu-item index="1-2">选项2</el-menu-item>
+                <el-menu-item :index="String(i)" @click="handleElMenuItemClick(item)">{{item.name}}</el-menu-item>
               </el-menu-item-group>
+            </el-submenu>
 
-            </el-submenu>
-            <!-- 测试列表 -->
-            <el-submenu index="2">
-              <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>导航2</span>
-              </template>
-              <el-menu-item-group>
-                <template slot="title">分组一</template>
-                <el-menu-item index="1-1">选项1</el-menu-item>
-                <el-menu-item index="1-2">选项2</el-menu-item>
-              </el-menu-item-group>
-            </el-submenu>
-            <!-- 测试列表 -->
-            <el-menu-item index="99">
-              <i class="el-icon-setting"></i>
-              <span slot="title">导航2</span>
-            </el-menu-item>
-            <!-- 测试列表 -->
-            <el-menu-item index="100">
-              <i class="el-icon-setting"></i>
-              <span slot="title">导航3</span>
-            </el-menu-item>
           </el-menu>
-
-
-
-
-
         </div>
+
       </el-aside>
   
       <el-container>
-        <el-header style="text-align: right; font-size: 12px">
-          <el-dropdown>
-            <i class="el-icon-setting" style="margin-right: 15px"></i>
-            <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>查看</el-dropdown-item>
-              <el-dropdown-item>新增</el-dropdown-item>
-              <el-dropdown-item>删除</el-dropdown-item>
-            </el-dropdown-menu>
-          </el-dropdown>
-          <span>王小虎</span>
-        </el-header>
-        
-        <el-main>
-          <el-table :data="tableData">
-            <el-table-column prop="date" label="日期" width="140">
-            </el-table-column>
-            <el-table-column prop="name" label="姓名" width="120">
-            </el-table-column>
-            <el-table-column prop="address" label="地址">
-            </el-table-column>
-          </el-table>
-        </el-main>
+        <router-view />
       </el-container>
+
     </el-container>
 
-    
-    
-    <router-view />
+
   </div>
 </template>
 
 <script>
-
+import getDate from '../util/index.js'
 export default {
   name: "Layout",
-  computed: {
-    key() {
-      return this.$route.path;
-    }
-  },
   data() {
-    const item = {
-      date: "2016-05-02",
-      name: "王小虎",
-      address: "上海市普陀区金沙江路 1518 弄"
-    };
     return {
-      tableData: Array(20).fill(item)
+
     };
   },
   computed: {
@@ -110,26 +55,31 @@ export default {
       return this.$router.options.routes;
       // return this.$store.state.user.menuList;
     },
-    activeMenu() {
-      // console.log(0);
-      const route = this.$route;
-      const { meta, path } = route;
-      // if set path, the sidebar will highlight the path you set
-      if (meta.activeMenu) {
-        return meta.activeMenu;
-      }
-      return path;
-    }
   },
   created() {
-    console.log(this.routes);
+    // console.log(this.routes);
   },
   methods: {
+    // 列表伸
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
     },
+    // 列表缩
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
+    },
+    // 组件列表点击
+    handleElMenuItemClick(item){
+      // console.log(item)
+      // console.log(item.path)
+      // console.log(this.key)
+      if(String(item.path) == String(this.key)){
+        // location.reload()
+        return
+      }else{
+        this.$router.push({ path: (item.path) })
+      }
+      
     }
   }
 };

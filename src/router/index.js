@@ -5,14 +5,17 @@ import Layout from '@/layout'
 
 
 import demo from '@/page/demo'
+import popup from '@/page/popup'
 
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    // { path: '/Layout', name: 'Layout', component: Layout},
-    // { path: '/demo', name: 'demo', component: demo},
+
+    // { path: '/', name: 'Layout', component: Layout},
+
+
 
     { path: '/', name:'demo测试', component: Layout,
       children: [{

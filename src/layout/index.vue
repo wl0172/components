@@ -3,6 +3,7 @@
 
     <el-container class="el-container">
 
+      <!-- 左侧 -->
       <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
 
         <div class="Layout-left">
@@ -30,11 +31,11 @@
         </div>
 
       </el-aside>
-  
+      <!-- 右侧 -->
       <el-container>
         <router-view />
       </el-container>
-
+      
     </el-container>
 
 
@@ -58,6 +59,7 @@ export default {
   },
   created() {
     // console.log(this.routes);
+    console.log(1)
   },
   methods: {
     // 列表伸
@@ -74,6 +76,7 @@ export default {
       // console.log(item.path)
       // console.log(this.key)
       if(String(item.path) == String(this.key)){
+        console.log(1)
         // location.reload()
         return
       }else{

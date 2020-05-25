@@ -5,6 +5,9 @@
     <button @click="button">button</button>
 
     {{num}}
+
+    <button @click="emit">emit</button>
+
   </div>
 </template>
 
@@ -21,7 +24,9 @@ export default {
   },
   created(){
 
-    
+    this.$on('wash_Goods',(arg)=> {
+      console.log(arg)
+    })
 
   },
   methods:{
@@ -33,6 +38,9 @@ export default {
       // localStorage.setItem("star",1)
       // localStorage.getItem("star")
 
+    },
+    emit(){
+      this.$emit('wash_Goods',['fish',true,{name:'vue',verison:'2.4'}])
     }
   }
 

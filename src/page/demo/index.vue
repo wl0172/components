@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       num:0,
-    }; 
+    };
   },
   watch:{
   },
@@ -26,6 +26,9 @@ export default {
 
     this.$on('wash_Goods',(arg)=> {
       console.log(arg)
+
+      // moment(new Date()).format('YYYY年MM月DD日 hh时mm分ss秒')
+      console.log(moment(new Date()).format('YYYY年MM月DD日 hh时mm分ss秒'))
     })
 
   },

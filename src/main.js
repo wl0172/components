@@ -9,7 +9,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 import "@/system/rem.js"
 
-
+import store from './store/index'
 
 
 
@@ -22,6 +22,7 @@ Vue.use(vant);
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

@@ -1,23 +1,39 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// import Layout from '@/layout'
-// import demo from '@/page/demo'
-// import popup from '@/page/popup'
+import Layout from '@/layout'
+import demo from '@/page/demo'
+import popup from '@/page/popup'
+
+import list from '@/page/list'
+
+
+
 
 import login from '@/page/login'
-import quickLogin from '@/page/login/quickLogin'
+import waterDetail from '@/page/login/water_detail'
+import buysDetail from '@/page/login/water_detail/buysDetail'
+import qqMap from '@/page/login/water_detail/qqMap'
+// import quickLogin from '@/page/login/quickLogin'
 
 
 Vue.use(Router)
 
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+   return originalPush.call(this, location).catch(err => err)
+}
+
 export default new Router({
   routes: [
 
-    { path: '/', component: login },
-    { path: '/quickLogin', component: quickLogin },
-
-
+    { path: '/', component: Layout },
+    { path: '/login', component: login },
+    { path: '/waterDetail', component: waterDetail },
+    { path: '/buysDetail', component: buysDetail },
+    { path: '/qqMap', component: qqMap },
+    
+    
 
 
     // { path: '/', name:'demo测试', component: Layout,
@@ -36,5 +52,15 @@ export default new Router({
     //     meta: { title: 'popup' }
     //   }]
     // },
+    // { path: '/list', name:'list', component: Layout,
+    //   children: [{
+    //     path: '/list',
+    //     name: 'list',
+    //     component: () => import('@/page/list'),
+    //     meta: { title: 'list' }
+    //   }]
+    // },
   ]
 })
+
+

@@ -59,7 +59,7 @@ export default {
   },
   created() {
     // console.log(this.routes);
-    console.log(1)
+    // console.log(1)
   },
   methods: {
     // 列表伸

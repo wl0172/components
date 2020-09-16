@@ -17,7 +17,12 @@ export default {
       popupShow:false,
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  created(){
+
+    console.log(this.$store.state.count)
+
+  },
 }
 </script>
 

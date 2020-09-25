@@ -14,7 +14,7 @@
             text-color="#fff" 
             active-text-color="#ffd04b">
             <div class="userInfo">
-              <div>头像信息</div>
+              <div>1</div>
             </div>
 
             <el-submenu index="1">
@@ -23,7 +23,7 @@
                 <span>组件列表</span>
               </template>
               <el-menu-item-group v-for="(item,i) in routes" :key="i">
-                <el-menu-item :index="String(i)" @click="handleElMenuItemClick(item)">{{item.name}}</el-menu-item>
+                <el-menu-item :index="String(i)" @click="handleElMenuItemClick(item)">{{item.component.name}}</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
 
@@ -58,7 +58,7 @@ export default {
     },
   },
   created() {
-    // console.log(this.routes);
+    console.log(this.routes);
     // console.log(1)
   },
   methods: {

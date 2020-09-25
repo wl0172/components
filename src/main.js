@@ -9,7 +9,31 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 import "@/system/rem.js"
 
-import store from './store/index'
+import store from './store/index'// 状态引入
+
+import customFilter from './filters'// 过滤器引入
+
+// 过滤器挂载 
+Object.keys(customFilter).forEach((key)=>{ Vue.filter(key,customFilter[key]) })
+
+
+Vue.directive('money',{
+  // 当被绑定的元素插入到 DOM 中时……
+  inserted:function(el){
+    // 聚焦元素
+    // console.log(el)
+    // console.log(el.innerHTML)
+    el.innerHTML = 0
+  },
+})
+// 自定义指令-input聚焦
+Vue.directive('focus',{
+  // 当被绑定的元素插入到 DOM 中时……
+  inserted:function(el){
+    // 聚焦元素
+    el.focus()
+  },
+})
 
 
 

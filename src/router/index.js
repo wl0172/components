@@ -7,6 +7,12 @@ import list from '@/page/list'
 
 Vue.use(Router)
 
+// 解决vue版本重复触发router事件
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+
 const router = new Router({
   routes: [
 

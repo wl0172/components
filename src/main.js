@@ -7,7 +7,7 @@ import vant from 'vant';
 import 'vant/lib/index.css';
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
-import "@/system/rem.js"
+// import "@/system/rem.js"
 
 import store from './store/index'// 状态引入
 
@@ -23,18 +23,9 @@ Vue.directive('money',{
     // 聚焦元素
     // console.log(el)
     // console.log(el.innerHTML)
-    el.innerHTML = 0
+    el.innerHTML = 'money指令'
   },
 })
-// 自定义指令-input聚焦
-Vue.directive('focus',{
-  // 当被绑定的元素插入到 DOM 中时……
-  inserted:function(el){
-    // 聚焦元素
-    el.focus()
-  },
-})
-
 
 
 Vue.config.productionTip = false

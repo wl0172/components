@@ -1,7 +1,7 @@
 <template>
   <div class="list">
     
-    <button @click="buttonss">{{aaa}}</button>
+    <button @click="buttonss">111</button>
 
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
   },
   computed:{
     ...mapGetters([
-      'aaa',
+      // 'aaa',
     ])
   },
   created(){

@@ -1,41 +1,42 @@
 <template>
   <div class="Layout">
 
-    <el-container class="el-container">
-
+    
+    <el-container>
       <!-- 左侧 -->
-      <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-
-        <div class="Layout-left">
-          <el-menu class="el-menu-vertical-demo" 
+      <el-aside width="200px">
+        <div class="user">1用户</div>
+        
+          <el-menu
+            default-active="2"
+            class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
-            background-color="#545c64" 
-            text-color="#fff" 
+            background-color="#545c64"
+            text-color="#fff"
             active-text-color="#ffd04b">
-            <div class="userInfo">
-              <div>1</div>
-            </div>
-
             <el-submenu index="1">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span>组件列表</span>
+                <span>导航一</span>
               </template>
-              <el-menu-item-group v-for="(item,i) in routes" :key="i">
-                <el-menu-item :index="String(i)" @click="handleElMenuItemClick(item)">{{item.component.name}}</el-menu-item>
+              <el-menu-item-group v-for="(item,index) in routes[0].children" :key="index">
+                <el-menu-item :index="String(index)" @click="handleElMenuItemClick(item)">{{item.meta.title}}</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
-
           </el-menu>
-        </div>
 
       </el-aside>
-      <!-- 右侧 -->
+      <!-- Header -->
       <el-container>
-        <router-view />
+        <el-header>Header</el-header>
+        <!-- main -->
+        <el-main>
+          <router-view />
+        </el-main>
+        <!-- Footer -->
+        <el-footer>Footer</el-footer>
       </el-container>
-      
     </el-container>
 
  
@@ -43,7 +44,6 @@
 </template>
 
 <script>
-import getDate from '../util/index.js'
 export default {
   name: "Layout",
   data() {
@@ -54,12 +54,15 @@ export default {
   computed: {
     routes() {
       return this.$router.options.routes;
-      // return this.$store.state.user.menuList;
     },
+    store(){
+      return this.$store.state;
+    }
+    
   },
   created() {
     console.log(this.routes);
-    // console.log(1)
+    console.log(this.store)
   },
   methods: {
     // 列表伸
@@ -72,17 +75,7 @@ export default {
     },
     // 组件列表点击
     handleElMenuItemClick(item){
-      // console.log(item)
-      // console.log(item.path)
-      // console.log(this.key)
-      if(String(item.path) == String(this.key)){
-        console.log(1)
-        // location.reload()
-        return
-      }else{
-        this.$router.push({ path: (item.path) })
-      }
-      
+      this.$router.push({ path: (item.path) })
     }
   }
   

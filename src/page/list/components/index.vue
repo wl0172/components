@@ -127,8 +127,6 @@ export default {
     
     // vuex-mapActions数字++
     handleButton_mapActions(){
-      // this.$forceUpdate()
-      // console.log(this.$store)
       this.$store.commit('newNum',10)
     },
     handleButton(e){

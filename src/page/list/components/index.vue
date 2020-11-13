@@ -1,5 +1,6 @@
 <template>
   <div class="HelloWorld">
+    我是子组件
 <!-- 
     <slot></slot>
     <slot name="header"></slot>
@@ -7,14 +8,14 @@
 
     <!-- <img :src="buildImagePath(userInformation.headImg,'PD750') || ''" :onerror="imgSrc" /> -->
 
-    <div ><span>测试(自定义指令-钱)：</span><span v-money>{{money}}</span></div>
+    <div ><span>测试(自定义指令全局-v-money)：</span><span v-money>{{money}}</span></div>
+    <div v-moneyChange>{{money}}</div>
     <br>
-
     <button @click="handleButton_mapActions">按钮操作mapActions Vuex:{{aaaa}}</button>
 
     <button @click="handleButton">父传过来的值：{{demos}}</button>
 
-    <div v-moneyChange>测试局部指令</div>
+
 
   </div>
 </template>
@@ -39,17 +40,14 @@ export default {
     // 指令的定义
     'moneyChange':{
       // bind：只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。
-      bind(el,binding){
-
-      },
+      bind(el,binding){},
       // inserted：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。
       inserted(el,binding){
         // console.log(el,binding)
+        el.innerHTML = el.innerHTML + '0'
       },
       // update：所在组件的 VNode 更新时调用，但是可能发生在其子 VNode 更新之前。指令的值可能发生了改变，也可能没有。但是你可以通过比较更新前后的值来忽略不必要的模板更新 (详细的钩子函数参数见下)。
-      update(el,binding){
-        
-      },
+      update(el,binding){},
     }
   },
   computed:{
@@ -59,7 +57,6 @@ export default {
   },
   watch:{
     'demos':function(i,ii){
-      console.log(i)
       if(i == 5){
         this.$emit("getValue")
       }
@@ -135,3 +132,11 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.HelloWorld{
+  background: red;
+  width: 100%;
+  height: 100%;
+}
+</style>

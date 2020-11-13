@@ -6,7 +6,7 @@
     <br>
     ----------分割线----------
     <br>
-    <span>子组件</span><HelloWorld :demos="demo" @getValue="getValuess"></HelloWorld>
+    <HelloWorld ref="aaa" :demos="demo" @getValue="getValuess"></HelloWorld>
     <br>
     ----------分割线----------
     <br>
@@ -31,16 +31,26 @@ export default {
   // 计算
   watch: {},
   // 计算
-  computed: {
+  computed: {},
+  created(){
     
+    // 在Vue生命周期的created()钩子函数进行的DOM操作一定要放在Vue.nextTick()的回调函数中
+    // this.$nextTick(()=>{
+    //   document.getElementsByClassName('index')[0].innerText = 1
+    // })
   },
   methods: {
     handleTo() {
       // this.$router.push("/demo");
       this.demo = ++this.demo
+
+      console.log(this.$refs)
+
+      this.$nextTick(()=>{
+        
+      })
     },
     getValuess(){
-      console.log(1)
       this.demo = 0
     }
 

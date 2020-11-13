@@ -23,7 +23,7 @@ Vue.directive('money',{
     // 聚焦元素
     // console.log(el)
     // console.log(el.innerHTML)
-    el.innerHTML = 'money指令'
+    el.innerHTML = el.innerHTML + '0'
   },
 })
 

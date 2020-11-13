@@ -31,14 +31,13 @@ const router = new Router({
     {path:'/demo',name: 'demo',component:Layout,meta: { title: '测试demo' }, redirect: "demo",
       children:[
         {path:'/demo',component: () => import('@/page/demo'),meta: { title: 'demo' }},
-        {path:'/list',component: () => import('@/page/list'),meta: { title: '组件-list' }},
+        {path:'/list',component: () => import('@/page/list'),meta: { title: 'list' }},
       ]
     },
     // 测试popup
     {path:'/popup',name: 'popup',component:Layout,meta: { title: '测试popup' }, redirect: "popup",
       children:[
-        {path:'/popup',component: () => import('@/page/popup'),meta: { title: '组件-popup' }},
-        {path:'/list',component: () => import('@/page/list'),meta: { title: '组件-list' }},
+        {path:'/popup',component: () => import('@/page/popup'),meta: { title: 'popup' }},
       ]
     },
 

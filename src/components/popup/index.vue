@@ -1,29 +1,28 @@
 <template>
-  <div class="popups">
-    <button @click="handleButton">按钮</button>
-    <br>
-    <popup></popup>
+  <div class="popup">
+
+    <button @click="popupShow = true">popup</button>
+
+    <div class="popup-conter" v-if="popupShow" @click="popupShow = false">
+      <div class="popup-conter-margin">111</div>
+    </div>
+
   </div>
 </template>
 
 <script>
-import popup from '../../components/popup/index'
 export default {
-  name: 'popups',
+  name: 'popup',
   data () {
     return {
+      popupShow:false,
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  components: {
-    popup
+  props:[],
+  created(){
+    
   },
-  created(){},
-  methods:{
-    handleButton(){
-      console.log(this.$store)
-    },
-  }
 }
 </script>
 

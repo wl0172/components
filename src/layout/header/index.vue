@@ -1,24 +1,22 @@
 <template>
-  <div class="quickLogin">
+  <div class="headerl">
 
-
+    {{headerl}}
 
   </div>
 </template>
 
 <script>
 export default {
-  name: "quickLogin",
+  name: "headerl",
   data() {
     return {
-      num:0,
+      headerl:'headerl',
     };
   },
-  watch:{
-  },
+  watch:{},
+  computed:{},
   created(){
-
-
   },
   methods:{
   }
@@ -28,4 +26,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import './index.scss'
 </style>

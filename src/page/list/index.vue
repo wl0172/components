@@ -1,101 +1,47 @@
 <template>
-  <div class="list">
-    
-    <button @click="buttonss">111</button>
+  <div class="index">
 
+    <button @click="handleTo">父按钮-{{demo}}</button>
+
+    <br>
+    ----------分割线----------
+    <br>
+    <span>子组件</span><HelloWorld :demos="demo" @getValue="getValuess"></HelloWorld>
+    <br>
+    ----------分割线----------
+    <br>
+
+      
   </div>
 </template>
 
 <script>
-
-import { mapGetters } from 'vuex'
-import stroe from './store/index.js'
+import { mapState, mapGetters, mapActions } from "vuex";
+import HelloWorld from "./components/index";
 export default {
-  name: "list",
+  components: {
+    HelloWorld
+  },
+  name: "index",
   data() {
     return {
+      demo: 1,
     };
   },
-  watch:{
-  },
-  computed:{
-    ...mapGetters([
-      // 'aaa',
-    ])
-  },
-  created(){
-    console.log(this)
-    // console.log(this.$store.state.count)
-
-  },
-  methods:{
-
-    buttonss(){
-
-      // console.log(stroe)
-
-      // console.log(stroe.state.count)
-
-      this.$store.commit('increment')
-
-
-
-
-      // console.log(this.$store.state.count)
-
-      // console.log(this.$store)
-    
-      // this.$store.commit('increment')
+  // 计算
+  watch: {},
+  // 计算
+  computed: {},
+  methods: {
+    handleTo() {
+      // this.$router.push("/demo");
+      this.demo = ++this.demo
+    },
+    getValuess(){
+      console.log(1)
+      this.demo = 0
     }
-    
-  }
 
+  }
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-.list{
-  width: 100%;
-  height: 100%;
-  font-size: 14px;
-  background: #F0F2F5;
-  .list-conter{
-    margin: 25px;
-    padding: 25px;
-    background: #ffffff;
-    .active{
-      height: 40px;
-      overflow: hidden;
-    }
-    .list-conter-input{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      // justify-content: space-between;
-      .list-conter-input-suffix{
-        width: 260px;
-        display: flex;
-        align-items: center;
-        margin: 0 20px 20px 0;
-        .list-conter-title{
-          width: 100px;
-        }
-      }
-    }
-    .list-button{
-      margin: 50px 0;
-      text-align: center;
-      button{
-        margin: 0 50px;
-      }
-    }
-    .el-pagination{
-      display: flex;
-      margin: 20px 0 0 0;
-      justify-content: flex-end;
-    }
-  }
-}
-
-</style>

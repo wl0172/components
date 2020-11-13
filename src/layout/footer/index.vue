@@ -1,26 +1,30 @@
 <template>
-  <div class="demo">
-    测试
+  <div class="footerl">
+
+    {{footerl}}
+
   </div>
 </template>
 
 <script>
 export default {
-  name: "demo",
+  name: "footerl",
   data() {
     return {
-      demo:0,
+      footerl:'footerl',
     };
   },
+  watch:{},
   computed:{},
-  watch:{
+  created(){
   },
-  created(){},
-  methods:{},
-  mounted(){}
+  methods:{
+  }
+
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import './index.scss'
 </style>

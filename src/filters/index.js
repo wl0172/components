@@ -80,6 +80,10 @@ const customFilter = {
     // console.log(value)
   },
 
+  // 判断数据类型
+  isType(){
+    // Object.prototype.toString.apply(null).slice(8, -1)
+  },
   
 }
 

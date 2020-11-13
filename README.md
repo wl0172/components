@@ -1,6 +1,6 @@
 ﻿# components
 
-> 666666组件库
+> 熊出没vue组件知识点
 
 ## Build Setup
 

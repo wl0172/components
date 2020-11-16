@@ -4,7 +4,11 @@
     <button @click="popupShow = true">popup</button>
 
     <div class="popup-conter" v-if="popupShow" @click="popupShow = false">
-      <div class="popup-conter-margin">111</div>
+      <div class="popup-conter-margin">
+        <div class="popuo-image">
+          <img src="@/assets/image/原型链.png" alt="">
+        </div>
+      </div>
     </div>
 
   </div>
@@ -43,6 +47,14 @@ export default {
     top: 25%;
     text-align: center;
     background: red;
+  }
+  .popuo-image{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>

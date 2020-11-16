@@ -11,6 +11,7 @@
     ----------分割线----------
     <br>
 
+    <div>测试{{abcd}}</div>
       
   </div>
 </template>
@@ -26,6 +27,7 @@ export default {
   data() {
     return {
       demo: 1,
+      abcd:null,
     };
   },
   // 计算
@@ -38,6 +40,16 @@ export default {
     // this.$nextTick(()=>{
     //   document.getElementsByClassName('index')[0].innerText = 1
     // })
+    setTimeout(() => {
+     console.log('created')
+     this.abcd = 'created'
+    },2000);
+  },
+  mounted(){
+    setTimeout(() => {
+     console.log('mounted')
+     this.abcd = 'mounted'
+    },5000);
   },
   methods: {
     handleTo() {

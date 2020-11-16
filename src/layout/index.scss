@@ -1,15 +1,19 @@
-.Layout{
+.Layout {
   width: 100%;
   height: 100%;
-  .el-container{
+
+  .el-container {
     height: 100%;
   }
-  .user{
+
+  .user {
     height: 60px;
     line-height: 60px;
   }
 }
-.el-header, .el-footer {
+
+.el-header,
+.el-footer {
   background-color: #B3C0D1;
   color: #333;
   text-align: center;
@@ -21,13 +25,16 @@
   color: #333;
   text-align: center;
   line-height: 200px;
-  .el-menu{
-    height: calc( 100% - 60px );
+
+  .el-menu {
+    height: calc(100% - 60px);
   }
-  .el-submenu{
+
+  .el-submenu {
     text-align: left;
   }
-  .el-menu-item{
+
+  .el-menu-item {
     text-align: left;
     min-width: 100%;
   }
@@ -41,7 +48,7 @@
   padding: 0;
 }
 
-body > .el-container {
+body>.el-container {
   margin-bottom: 40px;
 }
 
@@ -52,4 +59,100 @@ body > .el-container {
 
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 滚动条
+.el-aside::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 7px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+.el-aside::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #535353;
+}
+.el-aside::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ededed;
+}
+
+
+.el-aside::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 7px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+.el-aside::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  background-color: skyblue;
+  background-image: -webkit-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent);
+}
+.el-aside::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #ededed;
+  border-radius: 10px;
 }

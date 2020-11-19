@@ -16,10 +16,8 @@ export default {
   },
   watch:{},
   computed:{},
-  created(){
-  },
-  methods:{
-  }
+  created(){},
+  methods:{}
 
 };
 </script>

@@ -5,7 +5,7 @@
     <el-container>
       <!-- 左侧 -->
       <el-aside width="200px">
-        <div class="user">用户admin</div>
+        <div class="user">用户{{userName}}</div>
         
           <el-menu
             default-active="0"
@@ -16,14 +16,14 @@
             text-color="#fff"
             active-text-color="#ffd04b">
             
-              <div v-for="(item,index) in routes">
-                <el-submenu :index="String(index)" v-if="item.children" :key="index">
+              <div v-for="(item,index) in routesaa">
+                <el-submenu :index="String(index)" v-if="item.children" :key="item.meta.title">
                   <template slot="title">
                     <i class="el-icon-setting"></i>
                     <span>{{item.meta.title}}</span>
                   </template>
                   <el-menu-item-group>
-                    <el-menu-item :index="String(index)+'-'+String(_index)" v-for="(_item,_index) in item.children" :key="_index" @click="handleElMenuItemClick(_item)">{{_item.meta.title}}</el-menu-item>
+                    <el-menu-item :index="String(index)+'-'+String(_index)" v-for="(_item,_index) in item.children" :key="_item.meta.title" @click="handleElMenuItemClick(_item)">{{_item.meta.title}}</el-menu-item>
                   </el-menu-item-group>
                 </el-submenu>
                 <el-menu-item :index="String(index+1)" v-else @click="handleElMenuItemClick(item)">
@@ -63,6 +63,8 @@ export default {
   data() {
     return {
       newUrl:'',
+      userName:'',
+      routesaa:[],
     };
   },
   components: { footerl,headerl },
@@ -100,11 +102,11 @@ export default {
     window.onhashchange = (event) =>{
       // console.log(event.oldURL);
       // console.log(event.newURL);
-      if(event.newURL.split('#')[1] == '/'){
-        this.newUrl = ''
-      }else{
-        this.newUrl = event.newURL.split('#')[1]
-      }
+      // if(event.newURL.split('#')[1] == '/'){
+      //   this.newUrl = ''
+      // }else{
+      //   this.newUrl = event.newURL.split('#')[1]
+      // }
     }
   },
   beforeDestroy: function() {//销毁期间的生命周期函数：
@@ -120,7 +122,17 @@ export default {
     // console.log("created----2")
     // console.log(this.store)
     // console.log(this.routes);
+    this.routes.forEach((res)=>{
+      if(res.name == 'Layout' || res.name == 'login'){
+        
+      }else{
+        this.routesaa.push(res)
+      }
+    })
 
+    console.log(this.routesaa)
+    
+    this.userName = localStorage.getItem('userName')
     
   },
   methods: {

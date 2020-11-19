@@ -13,8 +13,7 @@ export default {
     };
   },
   computed:{},
-  watch:{
-  },
+  watch:{},
   created(){},
   methods:{},
   mounted(){}

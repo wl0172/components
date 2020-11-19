@@ -1,21 +1,15 @@
 <template>
   <div class="HelloWorld">
-    我是子组件
-<!-- 
-    <slot></slot>
-    <slot name="header"></slot>
-    <slot name="footer"></slot> -->
-
-    <!-- <img :src="buildImagePath(userInformation.headImg,'PD750') || ''" :onerror="imgSrc" /> -->
-
-    <div ><span>测试(自定义指令全局-v-money)：</span><span v-money>{{money}}</span></div>
-    <div v-moneyChange>{{money}}</div>
+    <button @click="handleButton">子按钮-父传过来的值：{{demos}}</button>
     <br>
     <button @click="handleButton_mapActions">按钮操作mapActions Vuex:{{aaaa}}</button>
 
-    <button @click="handleButton">父传过来的值：{{demos}}</button>
+    <div ><span>测试(自定义指令全局-v-money)：</span><span v-money>{{money}}</span></div>
+    <div v-moneyChange>测试(自定义指令局部-v-money)：{{money}}</div>
+    <br>
 
-
+    <!-- 图片失败处理 -->
+    <!-- <img :src="buildImagePath(userInformation.headImg,'PD750') || ''" :onerror="imgSrc" /> -->
 
   </div>
 </template>

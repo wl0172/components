@@ -1,12 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '../store/index'
 
 import Layout from '@/layout'
+
+import login from '@/page/login'
 
 
 import demo from '@/page/demo'
 import list from '@/page/list'
 import popup from '@/page/popup'
+import lazyLoading from '@/page/lazyLoading'
+
 
 Vue.use(Router)
 
@@ -19,35 +24,52 @@ Router.prototype.push = function push(location) {
 const router = new Router({
   routes: [
 
-    // { path: '/', name: 'Layout', component: Layout, meta: { title: 'Layout' }, redirect: "demo",
-    //   children:[
-    //     {path:'/demo',name: 'demo',component:demo,meta: { title: '组件1-demo' }},
-    //     {path:'/list',name: 'list',component:list,meta: { title: '组件2-list' }},
-    //   ]
-    // },
-    {path:'/',name: 'Layout',component:Layout,meta: { title: 'Layout' }},
+    {path:'/',name: 'Layout',component:Layout,meta: { title: 'Layout' }, redirect: "demo"},
+    {path:'/login',name: 'login',component:login,meta: { title: 'login' }},
 
     // 测试demo
-    {path:'/demo',name: 'demo',component:Layout,meta: { title: '测试demo' }, redirect: "demo",
+    {path:'/',name: '',component:Layout,meta: { title: '测试demo' }, redirect: "",
       children:[
         {path:'/demo',component: () => import('@/page/demo'),meta: { title: 'demo' }},
         {path:'/list',component: () => import('@/page/list'),meta: { title: 'list' }},
       ]
     },
-    // 测试popup
-    {path:'/popup',name: 'popup',component:Layout,meta: { title: '测试popup' }, redirect: "popup",
+    // 测试组件
+    {path:'/',name: '',component:Layout,meta: { title: '测试组件' }, redirect: "",
       children:[
-        {path:'/popup',component: () => import('@/page/popup'),meta: { title: 'popup' }},
+        {path:'/popup',component: () => import('@/page/popup'),meta: { title: '弹窗' }},
+        {path:'/lazyLoading',component: () => import('@/page/lazyLoading'),meta: { title: '懒加载' }},
       ]
     },
-
-
   ]
 })
 
+const whiteList = ['login']
+
 router.beforeEach((to,from,next)=>{
   window.document.title = to.meta.title || '默认'
-  next()
+
+  // console.log(localStorage.getItem('userName'))
+
+  // 从缓存中获取用户是否登录
+  // if(localStorage.getItem('userName')){
+  //   store.state.userLogin.name = localStorage.getItem('userName')
+  // }
+
+  if(localStorage.getItem('userName')){
+    if(to.meta.title == 'login'){
+      next({ path: '/' })
+    }else{
+      next()
+    }
+  }else{
+    if(whiteList.indexOf(to.meta.title) !== -1){
+      next()
+    }else{
+      next('/login')
+    }
+  }
+  // next()
 })
 
 export default router

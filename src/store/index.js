@@ -4,12 +4,19 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 const state = {
+  userLogin:{
+    name:'',
+  },
+
   showFooter: true,
   changableNum: 0,
   count: 0,
 };
 
 const getters = {
+  getUserInfoL(){
+    return state.userLogin
+  },
   isShow(state) {
     return state.showFooter
   },
@@ -17,15 +24,7 @@ const getters = {
     return state.changableNum
   },
 
-  getTodoById: (state) => (id) => {
-
-  },
-  // 等同于下面这个
-  // getTodoById:function(state){
-  // 	return function(id){
-
-  // 	}
-  // }
+  getTodoById: (state) => (id) => {},
 }
 
 const mutations = {
@@ -38,7 +37,6 @@ const mutations = {
   newNum(state, n) {
     state.changableNum++
   },
-
   // 加1
   INCREMENT(state) {
     state.count++;
@@ -46,25 +44,42 @@ const mutations = {
   // 减1
   DECREMENT(state) {
     state.count--
+  },
+  getUserLogin(){
+    state.userLogin.name = 123
   }
-
 }
 
-const actins = {
+const actions = {
   increment(context) {
     context.commit("INCREMENT");
   },
   decrement(context) {
     context.commit("DECREMENT");
+  },
+  _login(context){
+    return new Promise((resolve,reject)=>{
+      getUser().then(res=>{
+        // context.commit("getUserLogin");
+        // localStorage.setItem('userName', state.userLogin.name);
+        resolve()
+      }).catch(error => {
+        console.log('x-登录接口失败')
+        reject(error)
+      })
+      // resolve()
+    })
   }
+}
+function getUser(){
+  return new Promise((resolve,reject)=>{resolve()})
 }
 
 const store = new Vuex.Store({
   state,
   getters,
   mutations,
-  actins,
-
+  actions,
 })
 
 export default store;

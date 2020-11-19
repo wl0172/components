@@ -3,6 +3,8 @@
 
     {{headerl}}
 
+    <button class="headerl-button" @click="headleButton">退出</button>
+
   </div>
 </template>
 
@@ -16,9 +18,17 @@ export default {
   },
   watch:{},
   computed:{},
-  created(){
-  },
+  created(){},
   methods:{
+    headleButton(){
+      this.$store.state.userLogin.name = ''
+      //删除某个
+      localStorage.removeItem('userName');
+      //删除所有
+      // localStorage.clear();
+
+      this.$router.push({ path: '/login' });
+    },
   }
 
 };

@@ -2,39 +2,7 @@
   <div class="lazyLoading">
 
     <div class="image-list">
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/1_series_5door.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/2_series_convertible.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/2_series_active_tourer.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/2_series_gran_tourer.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/3_series_sedan.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/3_series_sedan_swb.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/3_series_gt.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/4_series_coupe.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/4_series_convertible.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/4_series_gran_coupe.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/5_series_sedan.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/5_series_sedan.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/6_series_gt.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/7_series_sedan.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/3_series_sedan_swb.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/3_series_gt.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/4_series_coupe.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/4_series_convertible.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/4_series_gran_coupe.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/5_series_sedan.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/5_series_sedan.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/6_series_gt.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/7_series_sedan.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/3_series_sedan_swb.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/3_series_gt.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/4_series_coupe.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/4_series_convertible.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/4_series_gran_coupe.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/5_series_sedan.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/5_series_sedan.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/6_series_gt.png"/>
-      <img class="image-item" src="" lazyload="true" data-original="https://www.bmw.com.cn/content/dam/bmw/marketCN/bmw_com_cn/model_card/7_series_sedan.png"/>
-      
+      <img v-for="(item,index) in 10" :key="item" class="image-item" src="../../assets/image/原型链.png" lazyload="true" data-original="../../assets/image/原型链.png"/>
     </div>
 
   </div>
@@ -56,7 +24,7 @@ export default {
       // 获取img标签含有设置data-orignal、lazyload的属性
       var elements = document.querySelectorAll('img[data-original][lazyload]')
 
-      Array.prototype.forEach.call(elements, function (item, index) {
+      Array.prototype.forEach.call(elements, function (item, index)  {
         var top
         var bottom
         if (item.dataset.original === '') {

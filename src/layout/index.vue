@@ -130,7 +130,7 @@ export default {
       }
     })
 
-    console.log(this.routesaa)
+    // console.log(this.routesaa)
     
     this.userName = localStorage.getItem('userName')
     

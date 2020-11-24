@@ -1,22 +1,22 @@
 <template>
-  <div class="demo">
-    测试
+  <div class="upload">
+    <upImage></upImage>
   </div>
 </template>
 
 <script>
+import upImage from "@/components/uploadImg"
 export default {
-  name: "demo",
+  name: "upload",
   data() {
     return {
-      demo:0,
+      
     };
   },
-  // 组件注册
-  components: {},
-  // 计算属性
+  components: {
+    upImage
+  },
   computed:{},
-  // 数据监听
   watch:{},
   created(){},
   methods:{},

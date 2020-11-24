@@ -1,8 +1,6 @@
 <template>
   <div class="popups">
-    <button @click="handleButton">按钮</button>
-    <br>
-    <popup></popup>
+    <popup :img="arrImg" :str="strIng"></popup>
   </div>
 </template>
 
@@ -12,7 +10,9 @@ export default {
   name: 'popups',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      arrImg:[1,2],
+      strIng:'1',
     }
   },
   components: {
@@ -20,9 +20,6 @@ export default {
   },
   created(){},
   methods:{
-    handleButton(){
-      console.log(this.$store)
-    },
   }
 }
 </script>

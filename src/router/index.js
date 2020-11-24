@@ -11,6 +11,8 @@ import demo from '@/page/demo'
 import list from '@/page/list'
 import popup from '@/page/popup'
 import lazyLoading from '@/page/lazyLoading'
+import upload from '@/page/upload'
+
 
 
 Vue.use(Router)
@@ -39,6 +41,7 @@ const router = new Router({
       children:[
         {path:'/popup',component: () => import('@/page/popup'),meta: { title: '弹窗' }},
         {path:'/lazyLoading',component: () => import('@/page/lazyLoading'),meta: { title: '懒加载' }},
+        {path:'/upload',component: () => import('@/page/upload'),meta: { title: '上传' }},
       ]
     },
   ]

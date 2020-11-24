@@ -1,15 +1,26 @@
 <template>
   <div class="popup">
-
-    <button @click="popupShow = true">popup</button>
-
-    <div class="popup-conter" v-if="popupShow" @click="popupShow = false">
-      <div class="popup-conter-margin">
-        <div class="popuo-image">
-          <img src="@/assets/image/原型链.png" alt="">
+    
+    <!-- 数组展示图片 -->
+    <div v-if="img.length">
+      <button @click="popupShow = true">图片展示</button>
+      <div class="popup-conter" v-if="popupShow" @click="popupShow = false">
+        <div class="popup-conter-margin">
+          <div class="popuo-image">
+            <img src="@/assets/image/原型链.png" alt="">
+          </div>
         </div>
       </div>
     </div>
+
+
+    <!--  -->
+    <div v-if="str">
+      <div>111</div>
+    </div>
+
+
+
 
   </div>
 </template>
@@ -23,9 +34,19 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  props:[],
+  props:{
+    img:{
+      type:Array,
+      default:[],
+    },
+    str:{
+      type:String,
+      default:'',
+    }
+  },
   created(){
-    
+    console.log(this.img)
+    console.log(this.str)
   },
 }
 </script>
@@ -46,7 +67,6 @@ export default {
     position: relative;
     top: 25%;
     text-align: center;
-    background: red;
   }
   .popuo-image{
     width: 100%;

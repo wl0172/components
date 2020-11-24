@@ -3,7 +3,7 @@
     
     <!-- 数组展示图片 -->
     <div v-if="img.length">
-      <button @click="popupShow = true">图片展示</button>
+      <button @click="handlePopup(),popupShow = true">图片展示</button>
       <div class="popup-conter" v-if="popupShow" @click="popupShow = false">
         <div class="popup-conter-margin">
           <div class="popuo-image">
@@ -16,7 +16,7 @@
 
     <!--  -->
     <div v-if="str">
-      <div>111</div>
+      <div>{{msg}}</div>
     </div>
 
 
@@ -45,9 +45,15 @@ export default {
     }
   },
   created(){
-    console.log(this.img)
-    console.log(this.str)
+    // console.log(this.img)
+    // console.log(this.str)
   },
+  methods:{
+    handlePopup(){
+      this.$parent.msg = 'this.$parent.msg'
+      console.log(this.$parent)
+    }
+  }
 }
 </script>
 

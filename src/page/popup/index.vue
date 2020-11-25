@@ -1,7 +1,7 @@
 <template>
   <div class="popups">
-    <popup :img="arrImg" :str="strIng" ref="popupA"></popup>
-    <button @click="handleButton">我是父button{{msg}}</button>
+    <popup :img="arrImg" :str="strIng"></popup>
+    <button @click="handleButton" ref="buttonA" id="bu">我是父button{{msg}}</button>
 
     <ul @click="handleUl">
       <li v-for="(item,index) in 5" :data-index="index">{{index}}</li>
@@ -34,20 +34,28 @@ export default {
   methods: {
     handleButton() {
       this.$children[0].msg = "this.$children[0].msg";
-      console.log(this.$children[0]);
+      // console.log(this.$children[0]);
 
-      console.log(this.$refs);
+      // console.log(this.$refs.buttonA.getBoundingClientRect());
+
+
+
     },
     // vue事件委托
     handleUl(ev){
       // console.log(ev)
       let target = ev.target || ev.srcElement;
       let index = target.getAttribute('data-index')
-      console.log(index)
+      // console.log(index)
 //       if(target.nodeName.toLowerCase() == 'li'){
 //         console.log(target.innerHTML);
 // 　　　}
-    }
+    },
+
+
+
+
+
   }
 };
 </script>

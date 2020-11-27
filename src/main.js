@@ -16,7 +16,7 @@ import customFilter from './filters'// 过滤器引入
 // 过滤器挂载 
 Object.keys(customFilter).forEach((key)=>{ Vue.filter(key,customFilter[key]) })
 
-
+// 全局指令
 Vue.directive('money',{
   // 当被绑定的元素插入到 DOM 中时……
   inserted:function(el){

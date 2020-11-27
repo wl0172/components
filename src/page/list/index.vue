@@ -13,7 +13,7 @@
 
     <!-- class绑定 -->
     <div>
-      <div :class="indexs == index?'a':''" @click="handleClass(index)" v-for="(item,index) in 3" :key="item">1</div>
+      <div :class="indexs == index?'a':''" @click="handleClass(index)" v-for="(item,index) in 3" :key="item">{{item}}</div>
     </div>
       
   </div>

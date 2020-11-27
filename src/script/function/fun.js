@@ -156,7 +156,18 @@ const funDemo = {
     var time2 = Date.parse(new Date(sDate2));
     var nDays = Math.abs(parseInt((time2 - time1)/1000/3600/24));
     return nDays;
-  }
+  },
+
+
+
+
+
+
+
+
+
+
+
 
 }
 

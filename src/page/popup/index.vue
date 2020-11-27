@@ -3,12 +3,12 @@
     <popup :img="arrImg" :str="strIng"></popup>
     <button @click="handleButton" ref="buttonA" id="bu">我是父button{{msg}}</button>
 
-    <ul @click="handleUl">
-      <li v-for="(item,index) in 5" :data-index="index">{{index}}</li>
-    </ul>
+    <div @click="handleUl">
+      <div class="popupHover" v-for="(item,index) in 5" :data-index="index">{{index}}</div>
+    </div>
 
     <!-- 边框0.5px -->
-    <div class="example"></div>
+    <div class="example">0.5px边框</div>
     <!-- 发光盒子 -->
     <div class="txt">欢迎来到Lpyexplore的编程小屋！</div>
     <!-- 盒子缺角动画 -->
@@ -32,21 +32,20 @@ export default {
   },
   created() {},
   methods: {
+    // 父子组件传值
     handleButton() {
       this.$children[0].msg = "this.$children[0].msg";
       // console.log(this.$children[0]);
 
       // console.log(this.$refs.buttonA.getBoundingClientRect());
-
-
-
     },
     // vue事件委托
     handleUl(ev){
       // console.log(ev)
-      let target = ev.target || ev.srcElement;
-      let index = target.getAttribute('data-index')
-      // console.log(index)
+      let target = ev.target || ev.srcElement;// dom对象
+      let index = target.getAttribute('data-index');// 下标
+
+//       console.log(index)
 //       if(target.nodeName.toLowerCase() == 'li'){
 //         console.log(target.innerHTML);
 // 　　　}
@@ -199,5 +198,9 @@ export default {
   transform-origin: bottom right;
   border-top-right-radius: inherit;
   box-shadow: 0.05em -0.05em 0.1em rgba(0, 0, 0, 0.15);
+}
+// 事件循环-hover
+.popupHover:hover{
+  background: red
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="popups">
     <popup :img="arrImg" :str="strIng"></popup>
-    <button @click="handleButton" ref="buttonA" id="bu">我是父button{{msg}}</button>
+    <button @click="handleButton" ref="buttonA" id="bu">11我是父button{{msg}}</button>
 
     <div @click="handleUl">
       <div class="popupHover" v-for="(item,index) in 5" :data-index="index">{{index}}</div>

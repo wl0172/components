@@ -12,9 +12,16 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {},
 
+    // 1， 首先找到使用vue脚手架建立项目config文件中的index.js文件
+    // 2， 修改dev里面的host属性值：改成 host: ‘0.0.0.0’
+    // 3， 最后在局域网下，使用自己的ip进行连接，同时别忘了重启项目
+    // 4.发现该版本的vue-cli将host主机名定义为localhost, 从而导致了本地IP不能访问服务。
+
+    
     // Various Dev Server settings
     // host: 'localhost', // can be overwritten by process.env.HOST
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '0.0.0.0', // can be overwritten by process.env.HOST
+    // host: 'http://192.168.0.121/', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

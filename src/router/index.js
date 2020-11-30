@@ -12,6 +12,11 @@ import list from '@/page/list'
 import popup from '@/page/popup'
 import lazyLoading from '@/page/lazyLoading'
 import upload from '@/page/upload'
+import magnifier from '@/page/magnifier'
+
+
+
+
 
 
 
@@ -42,6 +47,7 @@ const router = new Router({
         {path:'/popup',component: () => import('@/page/popup'),meta: { title: '弹窗' }},
         {path:'/lazyLoading',component: () => import('@/page/lazyLoading'),meta: { title: '懒加载' }},
         {path:'/upload',component: () => import('@/page/upload'),meta: { title: '上传' }},
+        {path:'/magnifier',component: () => import('@/page/magnifier'),meta: { title: '放大镜' }},
       ]
     },
   ]

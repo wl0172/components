@@ -84,6 +84,7 @@ export default {
   position: relative;
   width: 100px;
   height: 100px;
+  animation: spin 2s linear infinite;
 }
 .example::before {
   content: "";
@@ -113,6 +114,14 @@ export default {
   border: 2px solid red;
   border-radius: 10px;
   animation: animated-border 1.5s infinite;
+}
+@keyframes spin {
+	0%   {  /* Chrome, Opera 15+, Safari 3.1+ */  /* IE 9 */
+		transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+	}
+	100% {  /* Chrome, Opera 15+, Safari 3.1+ */  /* IE 9 */
+		transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+	}
 }
 // 盒子缺角动画
 @keyframes folding {

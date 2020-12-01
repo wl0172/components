@@ -3,7 +3,7 @@
     
     <!-- 数组展示图片 -->
     <div v-if="img.length">
-      <button @click="handlePopup(),popupShow = true">图片展示</button>
+      <button @click="handlePopup(),popupShow = true">我是popup</button>
       <div class="popup-conter" v-if="popupShow" @click="popupShow = false">
         <div class="popup-conter-margin">
           <div class="popuo-image">

@@ -15,8 +15,7 @@ export default {
   },
   components: { demo },
   computed:{},
-  watch:{
-  },
+  watch:{},
   created(){},
   methods:{},
   mounted(){}

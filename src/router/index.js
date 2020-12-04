@@ -13,7 +13,7 @@ import popup from '@/page/popup'
 import lazyLoading from '@/page/lazyLoading'
 import upload from '@/page/upload'
 import magnifier from '@/page/magnifier'
-
+import wangeditor from '@/page/wangeditor'
 
 
 
@@ -48,6 +48,7 @@ const router = new Router({
         {path:'/lazyLoading',component: () => import('@/page/lazyLoading'),meta: { title: '懒加载' }},
         {path:'/upload',component: () => import('@/page/upload'),meta: { title: '上传' }},
         {path:'/magnifier',component: () => import('@/page/magnifier'),meta: { title: '放大镜' }},
+        {path:'/wangeditor',component: () => import('@/page/wangeditor'),meta: { title: '富文本' }},
       ]
     },
   ]

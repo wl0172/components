@@ -10,7 +10,6 @@
 
 <script>
 export default {
-  name: "lazyLoading",
   data() {
     return {
       lazyLoading:0,

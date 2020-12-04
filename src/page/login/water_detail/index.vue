@@ -121,7 +121,6 @@
   import { NavBar,Popup,Notify } from "vant";
 
   export default {
-    name: "waterDetail",
     components: {
       [NavBar.name]: NavBar,
       [Popup.name]: Popup,

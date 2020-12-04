@@ -77,7 +77,6 @@
   import { NavBar,Popup,Notify,Swipe, SwipeItem } from "vant";
 
   export default {
-    name: "buysDetail",
     components: {
       [NavBar.name]: NavBar,
       [Popup.name]: Popup,

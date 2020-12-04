@@ -171,7 +171,6 @@
     NavBar
   } from "vant";
   export default {
-    name: 'ag',
     components: {
       [NavBar.name]: NavBar
     },

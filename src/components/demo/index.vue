@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  name: "demo",
   data() {
     return {
       demo:0,

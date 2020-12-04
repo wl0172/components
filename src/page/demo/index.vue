@@ -7,7 +7,6 @@
 <script>
 import demo from '../../components/demo/index'
 export default {
-  name: "demos",
   data() {
     return {
       demos:0,

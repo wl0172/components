@@ -17,7 +17,6 @@
 <script>
 import { mapState, mapGetters, mapActions } from "vuex";
 export default {
-  name: "HelloWorld",
   data() {
     return {
       money: '1',

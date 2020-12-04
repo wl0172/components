@@ -40,7 +40,6 @@
     
 <script>
   export default {
-    name: 'region',
     data() {
       return {
         cityList: [

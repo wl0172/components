@@ -19,7 +19,6 @@
 <script>
 import popup from "../../components/popup/index";
 export default {
-  name: "popups",
   data() {
     return {
       msg: "Welcome to Your Vue.js App",

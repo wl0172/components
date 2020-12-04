@@ -27,7 +27,6 @@
 
 <script>
 export default {
-  name: 'popup',
   data () {
     return {
       popupShow:false,

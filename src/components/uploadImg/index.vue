@@ -32,7 +32,6 @@
 
 <script>
 export default {
-  name: "upload",
   data() {
     return {
       upload:0,

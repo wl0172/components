@@ -27,7 +27,6 @@ export default {
   components: {
     HelloWorld
   },
-  name: "index",
   data() {
     return {
       demo: 1,

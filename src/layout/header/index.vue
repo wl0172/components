@@ -10,7 +10,6 @@
 
 <script>
 export default {
-  name: "headerl",
   data() {
     return {
       headerl:'headerl',

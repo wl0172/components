@@ -25,7 +25,6 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 export default {
-  name: "login",
   data() {
     return {
       login:0,

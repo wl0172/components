@@ -7,7 +7,6 @@
 <script>
 import upImage from "@/components/uploadImg"
 export default {
-  name: "upload",
   data() {
     return {
       

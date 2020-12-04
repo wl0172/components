@@ -160,6 +160,36 @@ const funDemo = {
 
 
 
+  // 复制
+  copy(item){
+    let item = 123
+    document.execCommand(item)
+    let Url2 = item
+    let oInput = document.createElement('input');
+    oInput.value = Url2;
+    document.body.appendChild(oInput);
+    oInput.select(); // 选择对象
+    document.execCommand("Copy"); // 执行浏览器复制命令
+    oInput.className = 'oInput';
+    oInput.style.display = 'none';
+  },
+  // 到达底部事件
+  windowbBttom(){
+    window.onscroll = function(){
+      //变量scrollTop是滚动条滚动时，距离顶部的距离
+      var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+      //变量windowHeight是可视区的高度
+      var windowHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      //变量scrollHeight是滚动条的总高度
+      var scrollHeight = document.documentElement.scrollHeight||document.body.scrollHeight;
+        //滚动条到底部的条件
+        if(scrollTop+windowHeight == scrollHeight){
+        //到了这个就可以进行业务逻辑加载后台数据了
+        console.log("到了底部");
+      }
+    }
+  }
+
 
 
 

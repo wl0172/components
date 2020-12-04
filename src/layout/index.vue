@@ -59,7 +59,6 @@
 import headerl from './header/index'
 import footerl from './footer/index'
 export default {
-  name: "Layout",
   data() {
     return {
       newUrl:'',

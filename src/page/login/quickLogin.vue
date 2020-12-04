@@ -48,7 +48,6 @@
   import ag from './agree/agreement.vue'
   import reg from './region.vue'
   export default {
-    name: "quickLogin",
     components: {
       [Popup.name]: Popup,
       [Checkbox.name]:Checkbox,

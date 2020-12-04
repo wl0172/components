@@ -8,7 +8,6 @@
 
 <script>
 export default {
-  name: "footerl",
   data() {
     return {
       footerl:'footerl',

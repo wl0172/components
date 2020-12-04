@@ -24,7 +24,6 @@
 
 <script>
 export default {
-  name: "magnifier",
   data() {
     return {
       magnifier:0,

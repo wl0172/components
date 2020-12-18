@@ -61,7 +61,7 @@ router.beforeEach((to,from,next)=>{
 
   // console.log(localStorage.getItem('userName'))
 
-  // 从缓存中获取用户是否登录
+  // 从缓存中获取用户是否登录1
   // if(localStorage.getItem('userName')){
   //   store.state.userLogin.name = localStorage.getItem('userName')
   // }
